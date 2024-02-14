@@ -14,7 +14,10 @@ public class User {
     @GeneratedValue
     private Long id;
 
-    private String nome;
+    @Column(name = "[name]")
+    private String name;
+
+    @Column(name = "[passWord]")
     private String passWord;
 
     @ManyToMany(fetch = FetchType.EAGER)

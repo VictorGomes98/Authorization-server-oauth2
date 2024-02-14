@@ -15,6 +15,6 @@ public class Authority {
 
     private String authority;
 
-    @ManyToMany(mappedBy = "Authorities")
+    @ManyToMany(mappedBy = "authorities")
     private Set<User> users;
 }

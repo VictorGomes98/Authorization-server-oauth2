@@ -1,0 +1,24 @@
+server:
+  port: 9090
+  error:
+    include-stacktrace: always
+
+spring:
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;useSSL=false;databaseName=OAUTH2;encrypt=false
+    username: admin
+    password: admin
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        connection:
+          characterEncoding: UTF-8
+          CharSet: UTF 8
+          useUnicode: true
+    hibernate:
+      ddl-auto: update
+
+jwsUri: http://localhost:8080/oauth2/jwt
+key: pass
